@@ -6,5 +6,5 @@ Gem::Specification.new do |s|
   s.description = 'Sun position as function of time'
   s.authors 	= 'Joel M. Gottlieb'
   s.email	= 'joel.gottlieb@gmail.com'
-  s.files	= ["lib/suntrack.rb"]
+  s.files	= ["lib/suntrack.rb","lib/suntrack/Point3D.rb","lib/suntrack/RAstro.rb"]
 end
