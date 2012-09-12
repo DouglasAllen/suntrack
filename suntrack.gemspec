@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name	= 'suntrack'
-  s.version	= '0.0.1'
-  s.date	= '2012-09-11'
+  s.version	= '0.0.2'
+  s.date	= '2012-09-12'
   s.summary     = 'Suntrack'
   s.description = 'Sun position as function of time'
   s.authors 	= 'Joel M. Gottlieb'
