@@ -1,0 +1,1171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Suntrack::Point3D
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Suntrack.html" title="Suntrack (class)">Suntrack</a></span></span>
+     &raquo; 
+    <span class="title">Point3D</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Suntrack::Point3D
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Suntrack::Point3D</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/suntrack/Point3D.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#x-instance_method" title="#x (instance method)">- (Object) <strong>x</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute x.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#y-instance_method" title="#y (instance method)">- (Object) <strong>y</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute y.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#z-instance_method" title="#z (instance method)">- (Object) <strong>z</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns the value of attribute z.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cartesian_to_polar%21-instance_method" title="#cartesian_to_polar! (instance method)">- (Object) <strong>cartesian_to_polar!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Convert to polar, from Cartesian M&amp;P, page 10.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ecliptic_to_equatorial%21-instance_method" title="#ecliptic_to_equatorial! (instance method)">- (Object) <strong>ecliptic_to_equatorial!</strong>(t) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Convert ecliptic coordinates to equatorial coordinates, given an epoch
+M&amp;P, page 16.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#equatorial_to_ecliptic%21-instance_method" title="#equatorial_to_ecliptic! (instance method)">- (Object) <strong>equatorial_to_ecliptic!</strong>(t) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Convert equatorial coordinates to ecliptic coordinates, given an epoch.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#equatorial_to_horizon-instance_method" title="#equatorial_to_horizon (instance method)">- (Suntrack::Point3D) <strong>equatorial_to_horizon</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Convert equatorial coordinates to horizon coordinates M&amp;P, pp.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Point3D) <strong>initialize</strong>(x, y, z) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of Point3D.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#polar_to_cartesian%21-instance_method" title="#polar_to_cartesian! (instance method)">- (Object) <strong>polar_to_cartesian!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Convert to Cartesian, from polar.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#precess_ecliptic_cartesian%21-instance_method" title="#precess_ecliptic_cartesian! (instance method)">- (Object) <strong>precess_ecliptic_cartesian!</strong>(t1, t2) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Precess an ecliptic Cartesian point between two epochs M&amp;P, page 21.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#precess_equatorial_cartesian%21-instance_method" title="#precess_equatorial_cartesian! (instance method)">- (Object) <strong>precess_equatorial_cartesian!</strong>(t1, t2) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Precess an equatorial Cartesian point between two epochs M&amp;P, page 21.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_s-instance_method" title="#to_s (instance method)">- (Object) <strong>to_s</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Suntrack::Point3D (class)">Point3D</a></span></tt>) <strong>initialize</strong>(x, y, z) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of Point3D
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/suntrack/Point3D.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='comma'>,</span> <span class='id identifier rubyid_y'>y</span><span class='comma'>,</span> <span class='id identifier rubyid_z'>z</span><span class='rparen'>)</span>
+  <span class='ivar'>@x</span> <span class='op'>=</span> <span class='id identifier rubyid_x'>x</span>
+  <span class='ivar'>@y</span> <span class='op'>=</span> <span class='id identifier rubyid_y'>y</span>
+  <span class='ivar'>@z</span> <span class='op'>=</span> <span class='id identifier rubyid_z'>z</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="x=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="x-instance_method">
+  
+    - (<tt>Object</tt>) <strong>x</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute x
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/suntrack/Point3D.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_x'>x</span>
+  <span class='ivar'>@x</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="y=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="y-instance_method">
+  
+    - (<tt>Object</tt>) <strong>y</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute y
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/suntrack/Point3D.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_y'>y</span>
+  <span class='ivar'>@y</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="z=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="z-instance_method">
+  
+    - (<tt>Object</tt>) <strong>z</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns the value of attribute z
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/suntrack/Point3D.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_z'>z</span>
+  <span class='ivar'>@z</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="cartesian_to_polar!-instance_method">
+  
+    - (<tt>Object</tt>) <strong>cartesian_to_polar!</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Convert to polar, from Cartesian M&amp;P, page 10
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/suntrack/Point3D.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_cartesian_to_polar!'>cartesian_to_polar!</span>
+  <span class='comment'># Note that this is 90-usual theta
+</span>  <span class='id identifier rubyid_x'>x</span> <span class='op'>=</span> <span class='ivar'>@x</span>
+  <span class='id identifier rubyid_y'>y</span> <span class='op'>=</span> <span class='ivar'>@y</span>
+  <span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='ivar'>@z</span>
+  <span class='id identifier rubyid_rho'>rho</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span> <span class='op'>*</span> <span class='id identifier rubyid_x'>x</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_y'>y</span> <span class='op'>*</span> <span class='id identifier rubyid_y'>y</span><span class='rparen'>)</span>
+  <span class='ivar'>@x</span> <span class='op'>=</span> <span class='id identifier rubyid_sqrt'>sqrt</span><span class='lparen'>(</span><span class='id identifier rubyid_rho'>rho</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_z'>z</span> <span class='op'>*</span> <span class='id identifier rubyid_z'>z</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='ivar'>@z</span> <span class='op'>=</span> <span class='id identifier rubyid_atn2'>atn2</span><span class='lparen'>(</span><span class='id identifier rubyid_y'>y</span><span class='comma'>,</span> <span class='id identifier rubyid_x'>x</span><span class='rparen'>)</span>
+  <span class='ivar'>@z</span> <span class='op'>+=</span> <span class='int'>360</span> <span class='kw'>if</span> <span class='ivar'>@z</span> <span class='op'>&lt;</span> <span class='int'>0</span> 
+  <span class='ivar'>@y</span> <span class='op'>=</span> <span class='id identifier rubyid_atn2'>atn2</span><span class='lparen'>(</span><span class='id identifier rubyid_z'>z</span><span class='comma'>,</span> <span class='id identifier rubyid_sqrt'>sqrt</span><span class='lparen'>(</span><span class='id identifier rubyid_rho'>rho</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ecliptic_to_equatorial!-instance_method">
+  
+    - (<tt>Object</tt>) <strong>ecliptic_to_equatorial!</strong>(t) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Convert ecliptic coordinates to equatorial coordinates, given an epoch
+M&amp;P, page 16
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/suntrack/Point3D.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ecliptic_to_equatorial!'>ecliptic_to_equatorial!</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
+  <span class='comment'># Correction for ecliptic obliquity
+</span>  <span class='comment'># M&amp;P, page 15
+</span>  <span class='comment'># Arises from slow alterations in the Earth's orbit as a result of 
+</span>  <span class='comment'># perturbations from other planets.
+</span>  <span class='id identifier rubyid_eps'>eps</span> <span class='op'>=</span> <span class='float'>23.43929111</span><span class='op'>-</span><span class='lparen'>(</span><span class='float'>46.815</span><span class='op'>+</span><span class='lparen'>(</span><span class='float'>0.00059</span><span class='op'>-</span><span class='float'>0.001813</span><span class='op'>*</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span><span class='op'>*</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span><span class='op'>*</span><span class='id identifier rubyid_t'>t</span><span class='op'>/</span><span class='int'>3600</span>
+  <span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='id identifier rubyid_cs'>cs</span><span class='lparen'>(</span><span class='id identifier rubyid_eps'>eps</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_s'>s</span> <span class='op'>=</span> <span class='id identifier rubyid_sn'>sn</span><span class='lparen'>(</span><span class='id identifier rubyid_eps'>eps</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_y'>y</span> <span class='op'>=</span> <span class='ivar'>@y</span>
+  <span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='ivar'>@z</span>
+  <span class='ivar'>@y</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_y'>y</span> <span class='op'>*</span> <span class='id identifier rubyid_c'>c</span><span class='rparen'>)</span> <span class='op'>-</span> <span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span> <span class='op'>*</span> <span class='id identifier rubyid_z'>z</span><span class='rparen'>)</span>
+  <span class='ivar'>@z</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_y'>y</span> <span class='op'>*</span> <span class='id identifier rubyid_s'>s</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span> <span class='op'>*</span> <span class='id identifier rubyid_z'>z</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="equatorial_to_ecliptic!-instance_method">
+  
+    - (<tt>Object</tt>) <strong>equatorial_to_ecliptic!</strong>(t) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Convert equatorial coordinates to ecliptic coordinates, given an epoch
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/suntrack/Point3D.rb', line 89</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_equatorial_to_ecliptic!'>equatorial_to_ecliptic!</span><span class='lparen'>(</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span>
+  <span class='comment'># Correction for ecliptic obliquity
+</span>  <span class='comment'># M&amp;P, page 15
+</span>  <span class='comment'># Arises from slow alterations in the Earth's orbit as a result of 
+</span>  <span class='comment'># perturbations from other planets.
+</span><span class='comment'># @param [Float] t Epoch constant
+</span>  <span class='id identifier rubyid_eps'>eps</span> <span class='op'>=</span> <span class='float'>23.43929111</span><span class='op'>-</span><span class='lparen'>(</span><span class='float'>46.815</span><span class='op'>+</span><span class='lparen'>(</span><span class='float'>0.00059</span><span class='op'>-</span><span class='float'>0.001813</span><span class='op'>*</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span><span class='op'>*</span><span class='id identifier rubyid_t'>t</span><span class='rparen'>)</span><span class='op'>*</span><span class='id identifier rubyid_t'>t</span><span class='op'>/</span><span class='int'>3600</span>
+  <span class='id identifier rubyid_y'>y</span> <span class='op'>=</span> <span class='ivar'>@y</span>
+  <span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='ivar'>@z</span>
+  <span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='id identifier rubyid_cs'>cs</span><span class='lparen'>(</span><span class='id identifier rubyid_eps'>eps</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_s'>s</span> <span class='op'>=</span> <span class='id identifier rubyid_sn'>sn</span><span class='lparen'>(</span><span class='id identifier rubyid_eps'>eps</span><span class='rparen'>)</span>
+  <span class='ivar'>@y</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_y'>y</span> <span class='op'>*</span> <span class='id identifier rubyid_c'>c</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span> <span class='op'>*</span> <span class='id identifier rubyid_z'>z</span><span class='rparen'>)</span>
+  <span class='ivar'>@z</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='op'>-</span><span class='int'>1</span> <span class='op'>*</span> <span class='id identifier rubyid_y'>y</span> <span class='op'>*</span> <span class='id identifier rubyid_s'>s</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span> <span class='op'>*</span> <span class='id identifier rubyid_z'>z</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="equatorial_to_horizon-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Suntrack::Point3D (class)">Suntrack::Point3D</a></span></tt>) <strong>equatorial_to_horizon</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Convert equatorial coordinates to horizon coordinates M&amp;P, pp. 34-35
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Suntrack::Point3D (class)">Suntrack::Point3D</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+pt polar coordinates: the altitude (y) and azimuth(z) of the input vector
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/suntrack/Point3D.rb', line 107</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_equatorial_to_horizon'>equatorial_to_horizon</span>
+  <span class='id identifier rubyid_cs_phi'>cs_phi</span> <span class='op'>=</span> <span class='id identifier rubyid_cs'>cs</span><span class='lparen'>(</span><span class='ivar'>@z</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_sn_phi'>sn_phi</span> <span class='op'>=</span> <span class='id identifier rubyid_sn'>sn</span><span class='lparen'>(</span><span class='ivar'>@z</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_cs_dec'>cs_dec</span> <span class='op'>=</span> <span class='id identifier rubyid_cs'>cs</span><span class='lparen'>(</span><span class='ivar'>@x</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_sn_dec'>sn_dec</span> <span class='op'>=</span> <span class='id identifier rubyid_sn'>sn</span><span class='lparen'>(</span><span class='ivar'>@x</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_cs_tau'>cs_tau</span> <span class='op'>=</span> <span class='id identifier rubyid_cs'>cs</span><span class='lparen'>(</span><span class='ivar'>@y</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_x'>x</span> <span class='op'>=</span> <span class='id identifier rubyid_cs_dec'>cs_dec</span> <span class='op'>*</span> <span class='id identifier rubyid_sn_phi'>sn_phi</span> <span class='op'>*</span> <span class='id identifier rubyid_cs_tau'>cs_tau</span> <span class='op'>-</span> <span class='id identifier rubyid_sn_dec'>sn_dec</span> <span class='op'>*</span> <span class='id identifier rubyid_cs_phi'>cs_phi</span>
+  <span class='id identifier rubyid_y'>y</span> <span class='op'>=</span> <span class='id identifier rubyid_cs_dec'>cs_dec</span> <span class='op'>*</span> <span class='id identifier rubyid_sn'>sn</span><span class='lparen'>(</span><span class='ivar'>@y</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='id identifier rubyid_cs_dec'>cs_dec</span> <span class='op'>*</span> <span class='id identifier rubyid_cs_phi'>cs_phi</span> <span class='op'>*</span> <span class='id identifier rubyid_cs_tau'>cs_tau</span> <span class='op'>+</span> <span class='id identifier rubyid_sn_dec'>sn_dec</span> <span class='op'>*</span> <span class='id identifier rubyid_sn_phi'>sn_phi</span>
+  <span class='id identifier rubyid_pt'>pt</span> <span class='op'>=</span> <span class='const'>Suntrack</span><span class='op'>::</span><span class='const'>Point3D</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='comma'>,</span><span class='id identifier rubyid_y'>y</span><span class='comma'>,</span><span class='id identifier rubyid_z'>z</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_pt'>pt</span><span class='period'>.</span><span class='id identifier rubyid_cartesian_to_polar!'>cartesian_to_polar!</span>
+  <span class='id identifier rubyid_pt'>pt</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="polar_to_cartesian!-instance_method">
+  
+    - (<tt>Object</tt>) <strong>polar_to_cartesian!</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Convert to Cartesian, from polar. No attempt is made to confirm that the
+original coordinates are polar (r, theta, phi). M&amp;P, page 10.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/suntrack/Point3D.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_polar_to_cartesian!'>polar_to_cartesian!</span>
+  <span class='comment'># Note that this is 90-usual theta.
+</span>  <span class='id identifier rubyid_rcst'>rcst</span> <span class='op'>=</span> <span class='ivar'>@x</span> <span class='op'>*</span> <span class='id identifier rubyid_cs'>cs</span><span class='lparen'>(</span><span class='ivar'>@y</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='ivar'>@x</span> <span class='op'>*</span> <span class='id identifier rubyid_sn'>sn</span><span class='lparen'>(</span><span class='ivar'>@y</span><span class='rparen'>)</span>
+  <span class='ivar'>@x</span> <span class='op'>=</span> <span class='id identifier rubyid_rcst'>rcst</span> <span class='op'>*</span> <span class='id identifier rubyid_cs'>cs</span><span class='lparen'>(</span><span class='ivar'>@z</span><span class='rparen'>)</span>
+  <span class='ivar'>@y</span> <span class='op'>=</span> <span class='id identifier rubyid_rcst'>rcst</span> <span class='op'>*</span> <span class='id identifier rubyid_sn'>sn</span><span class='lparen'>(</span><span class='ivar'>@z</span><span class='rparen'>)</span>
+  <span class='ivar'>@z</span> <span class='op'>=</span> <span class='id identifier rubyid_z'>z</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="precess_ecliptic_cartesian!-instance_method">
+  
+    - (<tt>Object</tt>) <strong>precess_ecliptic_cartesian!</strong>(t1, t2) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Precess an ecliptic Cartesian point between two epochs M&amp;P, page 21
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>t1</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Epoch constant for first epoch
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>t2</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Epoch constant for second epoch
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36
+37
+38
+39
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/suntrack/Point3D.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_precess_ecliptic_cartesian!'>precess_ecliptic_cartesian!</span><span class='lparen'>(</span><span class='id identifier rubyid_t1'>t1</span><span class='comma'>,</span><span class='id identifier rubyid_t2'>t2</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='id identifier rubyid_pmat_ecliptic'>pmat_ecliptic</span><span class='lparen'>(</span><span class='id identifier rubyid_t1'>t1</span><span class='comma'>,</span><span class='id identifier rubyid_t2'>t2</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_x'>x</span> <span class='op'>=</span> <span class='ivar'>@x</span>
+  <span class='id identifier rubyid_y'>y</span> <span class='op'>=</span> <span class='ivar'>@y</span>
+  <span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='ivar'>@z</span>
+  <span class='ivar'>@x</span> <span class='op'>=</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>+</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_y'>y</span> <span class='op'>+</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_z'>z</span>
+  <span class='ivar'>@y</span> <span class='op'>=</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>+</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_y'>y</span> <span class='op'>+</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_z'>z</span>
+  <span class='ivar'>@z</span> <span class='op'>=</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>+</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_y'>y</span> <span class='op'>+</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_z'>z</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="precess_equatorial_cartesian!-instance_method">
+  
+    - (<tt>Object</tt>) <strong>precess_equatorial_cartesian!</strong>(t1, t2) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Precess an equatorial Cartesian point between two epochs M&amp;P, page 21
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>t1</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Epoch constant for first epoch
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>t2</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Epoch constant for second epoch
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50
+51
+52
+53
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/suntrack/Point3D.rb', line 48</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_precess_equatorial_cartesian!'>precess_equatorial_cartesian!</span><span class='lparen'>(</span><span class='id identifier rubyid_t1'>t1</span><span class='comma'>,</span><span class='id identifier rubyid_t2'>t2</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_a'>a</span> <span class='op'>=</span> <span class='id identifier rubyid_pmat_equatorial'>pmat_equatorial</span><span class='lparen'>(</span><span class='id identifier rubyid_t1'>t1</span><span class='comma'>,</span><span class='id identifier rubyid_t2'>t2</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_x'>x</span> <span class='op'>=</span> <span class='ivar'>@x</span>
+  <span class='id identifier rubyid_y'>y</span> <span class='op'>=</span> <span class='ivar'>@y</span>
+  <span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='ivar'>@z</span>
+  <span class='ivar'>@x</span> <span class='op'>=</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>+</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_y'>y</span> <span class='op'>+</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_z'>z</span>
+  <span class='ivar'>@y</span> <span class='op'>=</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>+</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_y'>y</span> <span class='op'>+</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_z'>z</span>
+  <span class='ivar'>@z</span> <span class='op'>=</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_x'>x</span> <span class='op'>+</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_y'>y</span> <span class='op'>+</span> <span class='id identifier rubyid_a'>a</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='int'>2</span><span class='comma'>,</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>*</span> <span class='id identifier rubyid_z'>z</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_s-instance_method">
+  
+    - (<tt>Object</tt>) <strong>to_s</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/suntrack/Point3D.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='ivar'>@x</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='ivar'>@y</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='ivar'>@z</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Thu Sep 13 11:06:18 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>

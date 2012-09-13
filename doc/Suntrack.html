@@ -1,0 +1,581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Suntrack
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (S)</a> &raquo;
+    
+    
+    <span class="title">Suntrack</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Suntrack
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Suntrack</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/suntrack.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Main methods for Ruby version of calculations in  &#8220;Astronomy on the
+Personal Computer&#8221;, by Montenbruck and Pfleger (1991).
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Suntrack/Point3D.html" title="Suntrack::Point3D (class)">Point3D</a></span>, <span class='object_link'><a href="Suntrack/RAstro.html" title="Suntrack::RAstro (class)">RAstro</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="attributes-classvariable" class="">@@attributes =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span><span class='rbrace'>}</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#method_missing-class_method" title="method_missing (class method)">+ (Object) <strong>method_missing</strong>(name, *args) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+allow user to create new star location functions User must define
+declination and right ascension.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sirius_location-class_method" title="sirius_location (class method)">+ (Suntrack::Point3D) <strong>sirius_location</strong>(date_time, latitude, longitude) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns Sirius location, in altitude(sirius_position.y) and 
+azimuth(sirius_position.z), given DateTime, latitude and longitude.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#sun_location-class_method" title="sun_location (class method)">+ (Suntrack::Point3D) <strong>sun_location</strong>(date_time, latitude, longitude) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Returns Sun location, in altitude(sun_position.y) and 
+azimuth(sun_position.z), given DateTime, latitude and longitude.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="method_missing-class_method">
+  
+    + (<tt>Object</tt>) <strong>method_missing</strong>(name, *args) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+allow user to create new star location functions User must define
+declination and right ascension
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/suntrack.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_method_missing'>method_missing</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span>
+  <span class='id identifier rubyid_attribute'>attribute</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_attribute'>attribute</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>=$</span><span class='regexp_end'>/</span></span>
+    <span class='cvar'>@@attributes</span><span class='lbracket'>[</span><span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_chop'>chop</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_attribute'>attribute</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>location</span><span class='regexp_end'>/</span></span>
+    <span class='cvar'>@@star</span> <span class='op'>=</span> <span class='id identifier rubyid_attribute'>attribute</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(\w+)_location</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
+    <span class='kw'>begin</span>
+      <span class='id identifier rubyid_dt'>dt</span> <span class='op'>=</span> <span class='const'>DateTime</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
+      <span class='id identifier rubyid_mjd'>mjd</span> <span class='op'>=</span> <span class='const'>Suntrack</span><span class='op'>::</span><span class='const'>RAstro</span><span class='period'>.</span><span class='id identifier rubyid_to_mjd'>to_mjd</span><span class='lparen'>(</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_tau'>tau</span> <span class='op'>=</span> <span class='int'>15</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='const'>Suntrack</span><span class='op'>::</span><span class='const'>RAstro</span><span class='period'>.</span><span class='id identifier rubyid_lmst'>lmst</span><span class='lparen'>(</span><span class='id identifier rubyid_mjd'>mjd</span><span class='comma'>,</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='op'>-</span> <span class='cvar'>@@attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='cvar'>@@star</span><span class='rbrace'>}</span><span class='tstring_content'>_ra</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_z_in'>z_in</span> <span class='op'>=</span> <span class='const'>Suntrack</span><span class='op'>::</span><span class='const'>Point3D</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='cvar'>@@attributes</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='cvar'>@@star</span><span class='rbrace'>}</span><span class='tstring_content'>_declination</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span><span class='id identifier rubyid_tau'>tau</span><span class='comma'>,</span><span class='id identifier rubyid_args'>args</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_z'>z</span> <span class='op'>=</span> <span class='id identifier rubyid_z_in'>z_in</span><span class='period'>.</span><span class='id identifier rubyid_equatorial_to_horizon'>equatorial_to_horizon</span>
+      <span class='id identifier rubyid_z'>z</span>
+    <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_ex'>ex</span>
+      <span class='id identifier rubyid_p'>p</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Suntrack ERROR: Please define declination and right ascension for </span><span class='embexpr_beg'>#{</span><span class='cvar'>@@star</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sirius_location-class_method">
+  
+    + (<tt><span class='object_link'><a href="Suntrack/Point3D.html" title="Suntrack::Point3D (class)">Suntrack::Point3D</a></span></tt>) <strong>sirius_location</strong>(date_time, latitude, longitude) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns Sirius location, in altitude(sirius_position.y) and 
+azimuth(sirius_position.z), given DateTime, latitude and longitude
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>date_time</span>
+      
+      
+        <span class='type'>(<tt>DateTime</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the date and time for Sirius
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>latitude</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the user&#8217;s latitude, in degrees
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>longitude</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the user&#8217;s longitude, in degrees
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Suntrack/Point3D.html" title="Suntrack::Point3D (class)">Suntrack::Point3D</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the altitude (y) and azimuth(z) of Sirius
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/suntrack.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sirius_location'>sirius_location</span><span class='lparen'>(</span><span class='id identifier rubyid_date_time'>date_time</span><span class='comma'>,</span><span class='id identifier rubyid_latitude'>latitude</span><span class='comma'>,</span><span class='id identifier rubyid_longitude'>longitude</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_mjd'>mjd</span> <span class='op'>=</span> <span class='const'>Suntrack</span><span class='op'>::</span><span class='const'>RAstro</span><span class='period'>.</span><span class='id identifier rubyid_to_mjd'>to_mjd</span><span class='lparen'>(</span><span class='id identifier rubyid_date_time'>date_time</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_tau'>tau</span> <span class='op'>=</span> <span class='int'>15</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='const'>Suntrack</span><span class='op'>::</span><span class='const'>RAstro</span><span class='period'>.</span><span class='id identifier rubyid_lmst'>lmst</span><span class='lparen'>(</span><span class='id identifier rubyid_mjd'>mjd</span><span class='comma'>,</span><span class='id identifier rubyid_longitude'>longitude</span><span class='rparen'>)</span> <span class='op'>-</span> <span class='const'>Suntrack</span><span class='op'>::</span><span class='const'>RAstro</span><span class='op'>::</span><span class='const'>SIRIUS_RA</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_z_in'>z_in</span> <span class='op'>=</span> <span class='const'>Suntrack</span><span class='op'>::</span><span class='const'>Point3D</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>Suntrack</span><span class='op'>::</span><span class='const'>RAstro</span><span class='op'>::</span><span class='const'>SIRIUS_DECLINATION</span><span class='comma'>,</span><span class='id identifier rubyid_tau'>tau</span><span class='comma'>,</span><span class='id identifier rubyid_latitude'>latitude</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_sirius_position'>sirius_position</span> <span class='op'>=</span> <span class='id identifier rubyid_z_in'>z_in</span><span class='period'>.</span><span class='id identifier rubyid_equatorial_to_horizon'>equatorial_to_horizon</span>
+  <span class='id identifier rubyid_sirius_position'>sirius_position</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="sun_location-class_method">
+  
+    + (<tt><span class='object_link'><a href="Suntrack/Point3D.html" title="Suntrack::Point3D (class)">Suntrack::Point3D</a></span></tt>) <strong>sun_location</strong>(date_time, latitude, longitude) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>
+Returns Sun location, in altitude(sun_position.y) and 
+azimuth(sun_position.z), given DateTime, latitude and longitude
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>date_time</span>
+      
+      
+        <span class='type'>(<tt>DateTime</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the date and time for Sun position
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>latitude</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the user&#8217;s latitude, in degrees
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>longitude</span>
+      
+      
+        <span class='type'>(<tt>Float</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the user&#8217;s longitude, in degrees
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Suntrack/Point3D.html" title="Suntrack::Point3D (class)">Suntrack::Point3D</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+the altitude (y) and azimuth(z) of the Sun
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/suntrack.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_sun_location'>sun_location</span><span class='lparen'>(</span><span class='id identifier rubyid_date_time'>date_time</span><span class='comma'>,</span><span class='id identifier rubyid_latitude'>latitude</span><span class='comma'>,</span><span class='id identifier rubyid_longitude'>longitude</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_mjd'>mjd</span> <span class='op'>=</span> <span class='const'>Suntrack</span><span class='op'>::</span><span class='const'>RAstro</span><span class='period'>.</span><span class='id identifier rubyid_to_mjd'>to_mjd</span><span class='lparen'>(</span><span class='id identifier rubyid_date_time'>date_time</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_jd'>jd</span> <span class='op'>=</span> <span class='const'>Suntrack</span><span class='op'>::</span><span class='const'>RAstro</span><span class='period'>.</span><span class='id identifier rubyid_jd'>jd</span><span class='lparen'>(</span><span class='id identifier rubyid_mjd'>mjd</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_tm'>tm</span> <span class='op'>=</span> <span class='const'>Suntrack</span><span class='op'>::</span><span class='const'>RAstro</span><span class='period'>.</span><span class='id identifier rubyid_get_time'>get_time</span><span class='lparen'>(</span><span class='id identifier rubyid_jd'>jd</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_dec'>dec</span> <span class='op'>=</span> <span class='const'>Suntrack</span><span class='op'>::</span><span class='const'>RAstro</span><span class='period'>.</span><span class='id identifier rubyid_sun_position'>sun_position</span><span class='lparen'>(</span><span class='id identifier rubyid_tm'>tm</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_tau'>tau</span> <span class='op'>=</span> <span class='int'>15</span> <span class='op'>*</span> <span class='lparen'>(</span><span class='const'>Suntrack</span><span class='op'>::</span><span class='const'>RAstro</span><span class='period'>.</span><span class='id identifier rubyid_lmst'>lmst</span><span class='lparen'>(</span><span class='id identifier rubyid_mjd'>mjd</span><span class='comma'>,</span><span class='id identifier rubyid_longitude'>longitude</span><span class='rparen'>)</span> <span class='op'>-</span> <span class='id identifier rubyid_dec'>dec</span><span class='period'>.</span><span class='id identifier rubyid_z'>z</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_z_in'>z_in</span> <span class='op'>=</span> <span class='const'>Suntrack</span><span class='op'>::</span><span class='const'>Point3D</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_dec'>dec</span><span class='period'>.</span><span class='id identifier rubyid_y'>y</span><span class='comma'>,</span><span class='id identifier rubyid_tau'>tau</span><span class='comma'>,</span><span class='id identifier rubyid_latitude'>latitude</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_sun_position'>sun_position</span> <span class='op'>=</span> <span class='id identifier rubyid_z_in'>z_in</span><span class='period'>.</span><span class='id identifier rubyid_equatorial_to_horizon'>equatorial_to_horizon</span>
+  <span class='id identifier rubyid_sun_position'>sun_position</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Thu Sep 13 11:06:18 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>
