@@ -29,6 +29,8 @@ class Suntrack::Point3D
 
   # Precess an ecliptic Cartesian point between two epochs
   # M&P, page 21
+  # @param [Float] t1 Epoch constant for first epoch
+  # @param [Float] t2 Epoch constant for second epoch
   def precess_ecliptic_cartesian!(t1,t2)
     a = pmat_ecliptic(t1,t2)
     x = @x
@@ -41,6 +43,8 @@ class Suntrack::Point3D
 
   # Precess an equatorial Cartesian point between two epochs
   # M&P, page 21
+  # @param [Float] t1 Epoch constant for first epoch
+  # @param [Float] t2 Epoch constant for second epoch
   def precess_equatorial_cartesian!(t1,t2)
     a = pmat_equatorial(t1,t2)
     x = @x
@@ -87,6 +91,7 @@ class Suntrack::Point3D
     # M&P, page 15
     # Arises from slow alterations in the Earth's orbit as a result of 
     # perturbations from other planets.
+  # @param [Float] t Epoch constant
     eps = 23.43929111-(46.815+(0.00059-0.001813*t)*t)*t/3600
     y = @y
     z = @z
@@ -98,6 +103,7 @@ class Suntrack::Point3D
 
   # Convert equatorial coordinates to horizon coordinates
   # M&P, pp. 34-35
+  # @return [Suntrack::Point3D] pt polar coordinates: the altitude (y) and azimuth(z) of the input vector
   def equatorial_to_horizon
     cs_phi = cs(@z)
     sn_phi = sn(@z)
@@ -116,6 +122,8 @@ class Suntrack::Point3D
 
   # Precession matrix from one epoch to another, in ecliptic coordinates
   # M&P, page 20
+  # @param [Float] t1 Epoch constant for first epoch
+  # @param [Float] t2 Epoch constant for second epoch
   def pmat_ecliptic(t1,t2)
     sec = 3600
     dt = t2-t1
@@ -143,6 +151,8 @@ class Suntrack::Point3D
 
   # Precession matrix from one epoch to another, in equatorial coordinates
   # M&P, page 20
+  # @param [Float] t1 Epoch constant for first epoch
+  # @param [Float] t2 Epoch constant for second epoch
   def pmat_equatorial(t1,t2)
     sec = 3600
     dt = t2-t1

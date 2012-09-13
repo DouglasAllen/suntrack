@@ -14,6 +14,10 @@ class Suntrack::RAstro
   SIRIUS_RA = 6.75242
 
   # Sun position method.
+  # Returns Sun location, in declination and right ascension,
+  # given time in Julian centuries
+  # @param [Float] t time in Julian centuries
+  # @return [Suntrack::Point3D] the declination (y) and right ascension (z) of the Sun
   def self.sun_position(t)
     # Montebruck & Pfleger, page 36
     # Low-precision Sun position as a function of t

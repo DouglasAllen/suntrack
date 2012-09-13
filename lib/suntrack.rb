@@ -5,8 +5,12 @@ class Suntrack
 
   @@attributes = {}
 
-  # Return Sun location, in altitude(y) and azimuth(z), given 
-  # DateTime, latitude and longitude
+  # Returns Sun location, in altitude(sun_position.y) and 
+  # azimuth(sun_position.z), given DateTime, latitude and longitude
+  # @param [DateTime] date_time the date and time for Sun position
+  # @param [Float] latitude the user's latitude, in degrees
+  # @param [Float] longitude the user's longitude, in degrees
+  # @return [Suntrack::Point3D] the altitude (y) and azimuth(z) of the Sun
   def self.sun_location(date_time,latitude,longitude)
 
     mjd = Suntrack::RAstro.to_mjd(date_time)
@@ -15,18 +19,22 @@ class Suntrack
     dec = Suntrack::RAstro.sun_position(tm)
     tau = 15 * (Suntrack::RAstro.lmst(mjd,longitude) - dec.z)
     z_in = Suntrack::Point3D.new(dec.y,tau,latitude)
-    z = z_in.equatorial_to_horizon
-    z
+    sun_position = z_in.equatorial_to_horizon
+    sun_position
   end
 
-  # Return Sirius location, in altitude(y) and azimuth(z), given 
-  # DateTime, latitude and longitude
+  # Returns Sirius location, in altitude(sirius_position.y) and 
+  # azimuth(sirius_position.z), given DateTime, latitude and longitude
+  # @param [DateTime] date_time the date and time for Sirius
+  # @param [Float] latitude the user's latitude, in degrees
+  # @param [Float] longitude the user's longitude, in degrees
+  # @return [Suntrack::Point3D] the altitude (y) and azimuth(z) of Sirius
   def self.sirius_location(date_time,latitude,longitude)
     mjd = Suntrack::RAstro.to_mjd(date_time)
     tau = 15 * (Suntrack::RAstro.lmst(mjd,longitude) - Suntrack::RAstro::SIRIUS_RA)
     z_in = Suntrack::Point3D.new(Suntrack::RAstro::SIRIUS_DECLINATION,tau,latitude)
-    z = z_in.equatorial_to_horizon
-    z
+    sirius_position = z_in.equatorial_to_horizon
+    sirius_position
   end
 
   # allow user to create new star location functions
